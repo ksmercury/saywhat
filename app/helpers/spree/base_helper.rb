@@ -67,7 +67,7 @@ module Spree::BaseHelper
   end
 
   def stylesheet_tags(paths=stylesheet_paths)
-    paths.blank? ? '' : stylesheet_link_tag(paths)
+    paths.blank? ? '' : stylesheet_link_tag(paths, :cache => true)
   end
 
   def stylesheet_paths
